@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dynamic-persistence-volume-deployment
+spec:  
+  template:
+    metadata:
+      labels:
+        app: storagedemo
+    spec:
+      containers:
+      - name: storagedemo
+        image: pnimages.azurecr.io/storagedemo:1  
+        volumeMounts:
+        - name: azurefileshare
+          mountPath: /storage      
+      imagePullSecrets:
+      - name: pnimages       
+      volumes:
+      - name: azurefileshare
+        persistentVolumeClaim:
+          claimName: dynamic-persistence-volume-claim
+

@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  pascalnaber.k8s.storagedemo:
+    image: pascalnaber.k8s.storagedemo
+    build:
+      context: ./PascalNaber.K8s.StorageDemo
+      dockerfile: Dockerfile
