@@ -1,1 +1,1 @@
-This github repo contains the sources of my blogpost: 
+This github repo contains the sources of my blogpost: https://pascalnaber.wordpress.com/2018/01/26/persistent-storage-and-volumes-using-kubernetes-on-azure-with-aks-or-azure-container-service/
